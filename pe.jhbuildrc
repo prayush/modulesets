@@ -1,4 +1,13 @@
 prefix = '/home/cbc/pe/local/'
 modulesets_dir = '/home/cbc/pe/modulesets'
 checkoutroot = '/home/cbc/pe/src'
-icc = True
+
+intel_executables=['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']
+
+from distutils.spawn import find_executable
+def is_in_path(name):
+    """Check whether `name` is on PATH."""
+    return find_executable(name) is not None
+
+if all([is_in_path(name) for name in intel_executables]):
+   icc = True
