@@ -1,0 +1,4 @@
+prefix = '/home/cbc/pe/local/'
+modulesets_dir = '/home/cbc/pe/modulesets'
+checkoutroot = '/home/cbc/pe/src'
+icc = True
