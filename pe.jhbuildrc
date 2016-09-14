@@ -11,3 +11,6 @@ def is_in_path(name):
 
 if all([is_in_path(name) for name in intel_executables]):
    icc = True
+
+del name
+del intel_executables
