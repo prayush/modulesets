@@ -14,3 +14,5 @@ if all([is_in_path(name) for name in intel_executables]):
 
 del name
 del intel_executables
+
+os.environ['LAL_DATA_PATH'] = '/home/cbc/ROM_data/'
