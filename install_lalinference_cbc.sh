@@ -44,8 +44,6 @@ echo "branches['lalapps'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuild
 echo "branches['glue'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['pylal'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['ligo'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
-echo "branches['gracedb'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
-echo "branches['lvalert'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "" >> ~/pe/.config/pe.jhbuildrc
 echo "intel_executables = ['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']" >> ~/pe/.config/pe.jhbuildrc
 echo "" >> ~/pe/.config/pe.jhbuildrc
