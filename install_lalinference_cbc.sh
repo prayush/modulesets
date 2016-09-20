@@ -41,7 +41,6 @@ echo "branches['lalinspiral'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhb
 echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalinference'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalapps'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
-echo "branches['lalsuite-extra'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['glue'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['pylal'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['ligo'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
@@ -65,7 +64,7 @@ echo "os.environ['LAL_DATA_PATH'] = '$HOME/ROM_data/'" >> ~/pe/.config/pe.jhbuil
 echo "" >> ~/pe/.config/pe.jhbuildrc
 
 # Install lalsuite from anonymous repository
-~/pe/.local/bin/jhbuild build lalsuite
+~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc build lalsuite
 
 ## If needed, install additional packages:
 # ~/pe/.local/bin/jhbuild -f ~/.config/jhbuildrc run $SHELL --noprofile --norc
