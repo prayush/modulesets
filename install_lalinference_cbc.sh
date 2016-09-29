@@ -69,6 +69,6 @@ echo "" >> ~/pe/.config/pe.jhbuildrc
 # pip install <package> --install-option="--prefix=~/pe/local/"
 
 # Create initisalisation script
-echo "#!/bin/bash" > ~/pe/lalinference_o2.sh
+echo '#!/bin/bash' > ~/pe/lalinference_o2.sh
 echo "$HOME/pe/.local/bin/jhbuild -f $HOME/pe/.config/jhbuildrc run $SHELL --noprofile --norc" >> ~/pe/lalinference_o2.sh
 chmod a+x ~/pe/lalinference_o2.sh
