@@ -65,10 +65,10 @@ echo "" >> ~/pe/.config/pe.jhbuildrc
 ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc build --distclean --force lalsuite
 
 ## If needed, install additional packages:
-# ~/pe/.local/bin/jhbuild -f ~/.config/jhbuildrc run $SHELL --noprofile --norc
+# ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc run $SHELL --noprofile --norc
 # pip install <package> --install-option="--prefix=~/pe/local/"
 
 # Create initisalisation script
 echo '#!/bin/bash' > ~/pe/lalinference_o2.sh
-echo "$HOME/pe/.local/bin/jhbuild -f $HOME/pe/.config/jhbuildrc run $SHELL --noprofile --norc" >> ~/pe/lalinference_o2.sh
+echo "$HOME/pe/.local/bin/jhbuild -f $HOME/pe/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ~/pe/lalinference_o2.sh
 chmod a+x ~/pe/lalinference_o2.sh
