@@ -62,7 +62,7 @@ echo "os.environ['LAL_DATA_PATH'] = '$HOME/ROM_data/'" >> ~/pe/.config/pe.jhbuil
 echo "" >> ~/pe/.config/pe.jhbuildrc
 
 # Install lalsuite from anonymous repository
-~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc build --distclean --force --no-interact lalsuite
+~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact build --distclean --force lalsuite
 
 ## If needed, install additional packages:
 # ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc run $SHELL --noprofile --norc
