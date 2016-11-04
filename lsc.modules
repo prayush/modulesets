@@ -11,6 +11,8 @@
       href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
       href="http://software.ligo.org/lscsoft/source/"/>
+  <repository type="svn" name="svn.ligo.caltech.edu"
+      href="https://svn.ligo.caltech.edu/svn/"/>
 
   <distutils id="ligo-proposal-tool">
     <branch repo="git.ligo.org" module="ligo-proposal-tool"/>
@@ -100,6 +102,7 @@
       <dep package="lalpulsar"/>
       <dep package="skyarea"/>
       <dep package="corner"/>
+      <dep package="bayeswave"/>
     </dependencies>
   </autotools>
 
@@ -262,4 +265,18 @@
       <dep package="pylal"/>
     </dependencies>
   </distutils>
+
+  <autotools id="bayeswave" supports-non-srcdir-builds="no" skip-autogen="true" skip-install="true" check-target="false" makeargs="--directory=src">
+    <branch repo="svn.ligo.caltech.edu" module="bayeswave"/>
+    <dependencies>
+      <dep package="lal"/>
+      <dep package="lalframe"/>
+      <dep package="lalmetaio"/>
+      <dep package="lalpulsar"/>
+      <dep package="lalinspiral"/>
+      <dep package="lalsimulation"/>
+      <dep package="lalinference"/>
+    </dependencies>
+  </autotools>
+
 </moduleset>
