@@ -102,7 +102,6 @@
       <dep package="lalpulsar"/>
       <dep package="skyarea"/>
       <dep package="corner"/>
-      <dep package="bayeswave"/>
     </dependencies>
   </autotools>
 
@@ -201,6 +200,7 @@
       <dep package="ligo"/>
       <dep package="gracedb"/>
       <dep package="lvalert"/>
+      <dep package="bayeswave"/>
     </dependencies>
   </metamodule>
 
