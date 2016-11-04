@@ -12,7 +12,7 @@
   <repository type="tarball" name="software.ligo.org"
       href="http://software.ligo.org/lscsoft/source/"/>
   <repository type="svn" name="svn.ligo.caltech.edu"
-      href="https://svn.ligo.caltech.edu/svn/"/>
+      href="https://galaxy.ligo.caltech.edu/svn/"/>
 
   <distutils id="ligo-proposal-tool">
     <branch repo="git.ligo.org" module="ligo-proposal-tool"/>
