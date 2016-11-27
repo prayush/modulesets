@@ -216,7 +216,7 @@
   </distutils>
 
   <distutils id="skyarea">
-    <branch module="farr/skyarea"/>
+    <branch module="farr/skyarea" tag="970dd0f39d61ab2451eeb5bce199d7b45d0e545c"/>
   </distutils>
 
   <distutils id="corner">
