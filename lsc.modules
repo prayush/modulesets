@@ -267,7 +267,7 @@
   </distutils>
 
   <autotools id="bayeswave" supports-non-srcdir-builds="no" skip-autogen="true" skip-install="true" check-target="false" makeargs="--directory=src">
-    <branch repo="svn.ligo.caltech.edu" module="bayeswave"/>
+    <branch repo="svn.ligo.caltech.edu" module="bayeswave" tag="O2_online"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
