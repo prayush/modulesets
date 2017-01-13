@@ -65,6 +65,9 @@ echo "" >> ~/pe/.config/pe.jhbuildrc
 # Install lalsuite from anonymous repository
 ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ --clean --distclean --force lalsuite
 
+# Move bayeswave as it gets build in source directory
+cp ~/pe/src/bayeswave/src/bayeswave ~/pe/local/bin/ 
+
 ## If needed, install additional packages:
 # ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc run $SHELL --noprofile --norc
 # pip install <package> --install-option="--prefix=~/pe/local/"
