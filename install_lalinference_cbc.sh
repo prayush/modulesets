@@ -30,6 +30,7 @@ fi
 echo "prefix = '$HOME/pe/local/'" > ~/pe/.config/pe.jhbuildrc
 echo "modulesets_dir = '$HOME/pe/modulesets'" >> ~/pe/.config/pe.jhbuildrc
 echo "checkoutroot = '$HOME/pe/src'" >> ~/pe/.config/pe.jhbuildrc
+echo "buildroot = '$HOME/pe/local/build'" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lal'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['laldetchar'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalframe'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
