@@ -83,6 +83,22 @@ Grid computing clusters. To enable building with `icc`, add the line
     $ echo 'icc = True' >> ~/.config/my.jhbuildrc
 
 
+Change installation options (branch, compile flags, ...)
+--------------------------------------------------------
+
+Any file of the name *.jhbuildrc in the configuration directory will be picked
+up by jhbuild and can be used to modify default settings. (See for an example the 
+pe.jhbuildrc file). To set a particular branch for a particular package, for instance
+compiling the `lalsimulation package` from the branch `lalinference_o2`, use:
+
+    $ echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ~/.config/my.jhbuildrc
+
+To set specific compiler flag, such as debug options:
+
+    $ echo "os.environ['CFLAGS'] = '-Wall -g -O0'" >> ~/.config/my.jhbuildrc
+
+More details are available in the JHBuild manual (<https://developer.gnome.org/jhbuild/unstable/config-reference.html.en>)
+
 MacPorts
 --------
 
