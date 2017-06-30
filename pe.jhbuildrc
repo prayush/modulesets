@@ -50,5 +50,7 @@ del name
 del intel_executables
 del install_id
 del condition
+del home
+del rootdir
 
 os.environ['LAL_DATA_PATH'] = os.path.join(home,'ROM_data/')
