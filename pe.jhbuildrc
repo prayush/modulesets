@@ -1,8 +1,41 @@
-prefix = '/home/cbc/pe/local/'
-modulesets_dir = '/home/cbc/pe/modulesets'
-checkoutroot = '/home/cbc/pe/src'
+install_id='lalinference_o2'
 
-intel_executables=['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']
+for condition in conditions:
+    if 'install_id:' in condition:
+       install_id=condition.replace('install_id:','')
+       break
+
+conditions.remove(condition)
+
+if install_id == 'lalinference_o2':
+   branches['pycbc'] = (None,'949f9ba3d062dd54ef9626e01db3987535bd5f43')
+   branches['bayeswave'] = 'svn://galaxy.ligo.caltech.edu/svn/bayeswave/tags/O2_online'
+
+rootdir=os.path.join(os.path.expanduser("~"),'pe')
+
+prefix = os.path.join(rootdir,install_id)
+modulesets_dir = os.path.join(rootdir,'modulesets')
+checkoutroot = os.path.join(rootdir,'src')
+buildroot = os.path.join(prefix,'build')
+tinderbox_outputdir = os.path.join(home,'public_html/pe/build/',install_id)
+
+branches['lal'] = (None,install_id)
+branches['laldetchar'] = (None,install_id)
+branches['lalframe'] = (None,install_id)
+branches['lalmetaio'] = (None,install_id)
+branches['lalxml'] = (None,install_id)
+branches['lalburst'] = (None,install_id)
+branches['lalpulsar'] = (None,install_id)
+branches['lalstochastic'] = (None,install_id)
+branches['lalinspiral'] = (None,install_id)
+branches['lalsimulation'] = (None,install_id)
+branches['lalinference'] = (None,install_id)
+branches['lalapps'] = (None,install_id)
+branches['glue'] = (None,install_id)
+branches['pylal'] = (None,install_id)
+branches['ligo'] = (None,install_id)
+
+intel_executables = ['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']
 
 from distutils.spawn import find_executable
 def is_in_path(name):
@@ -14,5 +47,7 @@ if all([is_in_path(name) for name in intel_executables]):
 
 del name
 del intel_executables
+del install_id
+del condition
 
-os.environ['LAL_DATA_PATH'] = '/home/cbc/ROM_data/'
+os.environ['LAL_DATA_PATH'] = os.path.join(home,'ROM_data/')

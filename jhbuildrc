@@ -70,7 +70,7 @@ os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] 
 prefix = '~/local'
 
 # custom CFLAGS / environment pieces for the build
-# os.environ['CFLAGS'] = '-Wall -g -O0'
+os.environ['CFLAGS'] = '-Wall -g -O0'
 
 # custom environment variables for Mac OS under MacPorts
 if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):

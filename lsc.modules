@@ -3,8 +3,10 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
+  <repository type="git" name="github.vivienr"
+      href="https://github.com/vivienr/" default="yes"/>
   <repository type="git" name="versions.ligo.org"
-      href="git://versions.ligo.org/" default="yes"/>
+      href="git://versions.ligo.org/" default="no"/>
   <repository type="git" name="git.ligo.org"
       href="https://git.ligo.org/" default="no"/>
   <repository type="git" name="ligo-cbc"
@@ -261,7 +263,7 @@
   </distutils>
 
   <distutils id="pycbc">
-    <branch repo="ligo-cbc" module="pycbc"/>
+    <branch repo="github.vivienr" module="pycbc"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalsimulation"/>
@@ -272,7 +274,7 @@
   </distutils>
 
   <autotools id="bayeswave" supports-non-srcdir-builds="no" skip-autogen="true" skip-install="true" check-target="false" makeargs="--directory=src">
-    <branch repo="svn.ligo.caltech.edu" module="bayeswave" tag="O2_online"/>
+    <branch repo="svn.ligo.caltech.edu" module="bayeswave"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
