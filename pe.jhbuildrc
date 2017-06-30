@@ -9,7 +9,7 @@ conditions.remove(condition)
 
 if install_id == 'lalinference_o2':
    branches['pycbc'] = (None,'949f9ba3d062dd54ef9626e01db3987535bd5f43')
-   branches['bayeswave'] = 'svn://galaxy.ligo.caltech.edu/svn/bayeswave/tags/O2_online'
+   branches['bayeswave'] = 'https://galaxy.ligo.caltech.edu/svn/bayeswave/tags/O2_online'
 
 home = os.path.expanduser("~")
 rootdir = os.path.join(home,'pe')
