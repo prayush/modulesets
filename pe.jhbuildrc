@@ -46,11 +46,11 @@ def is_in_path(name):
 if all([is_in_path(name) for name in intel_executables]):
    icc = True
 
+os.environ['LAL_DATA_PATH'] = os.path.join(home,'ROM_data')
+
 del name
 del intel_executables
 del install_id
 del condition
 del home
 del rootdir
-
-os.environ['LAL_DATA_PATH'] = os.path.join(home,'ROM_data/')
