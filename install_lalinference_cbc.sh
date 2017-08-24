@@ -64,7 +64,7 @@ echo "os.environ['LAL_DATA_PATH'] = '$HOME/ROM_data/'" >> ~/pe/.config/pe.jhbuil
 echo "" >> ~/pe/.config/pe.jhbuildrc
 
 # Install lalsuite from anonymous repository
-~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ --clean --distclean --force lalsuite
+~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite
 
 # Move bayeswave as it gets build in source directory
 cp ~/pe/src/bayeswave/src/bayeswave ~/pe/local/bin/ 
