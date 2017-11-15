@@ -2,6 +2,15 @@
 
 export INSTALL_DIR=${1}
 
+if [ -z "$2" ]
+  then
+    export LAL_BRANCH=lalinference_o2
+    echo "LAL Branch not specified. Installing " $LAL_BRANCH " (default)"
+  else
+    export LAL_BRANCH=${2}
+fi
+
+
 # Create pe directory where the installation will be
 mkdir -p ${INSTALL_DIR}
 cd ${INSTALL_DIR}
@@ -33,21 +42,21 @@ echo "prefix = '${INSTALL_DIR}/local/'" > ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "modulesets_dir = '${INSTALL_DIR}/modulesets'" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "checkoutroot = '${INSTALL_DIR}/src'" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "buildroot = '${INSTALL_DIR}/local/build'" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lal'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['laldetchar'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalframe'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalmetaio'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalxml'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalburst'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalpulsar'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalstochastic'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalinspiral'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalinference'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['lalapps'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['glue'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['pylal'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['ligo'] = (None,'lalinference_o2')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lal'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['laldetchar'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalframe'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalmetaio'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalxml'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalburst'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalpulsar'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalstochastic'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalinspiral'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalsimulation'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalinference'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['lalapps'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['glue'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['pylal'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['ligo'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "intel_executables = ['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
@@ -76,6 +85,6 @@ cp ${INSTALL_DIR}/src/bayeswave/src/bayeswave ${INSTALL_DIR}/local/bin/
 # pip install <package> --install-option="--prefix=${INSTALL_DIR}/local/"
 
 # Create initisalisation script
-echo '#!/bin/bash' > ${INSTALL_DIR}/lalinference_o2.sh
-echo "${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ${INSTALL_DIR}/lalinference_o2.sh
-chmod a+x ${INSTALL_DIR}/lalinference_o2.sh
+echo '#!/bin/bash' > ${INSTALL_DIR}/${LAL_BRANCH}.sh
+echo "${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ${INSTALL_DIR}/${LAL_BRANCH}.sh
+chmod a+x ${INSTALL_DIR}/${LAL_BRANCH}.sh
