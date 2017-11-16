@@ -74,8 +74,11 @@ echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "os.environ['LAL_DATA_PATH'] = '$HOME/ROM_data/'" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 
+echo "Starting installation..."
 # Install lalsuite from anonymous repository
 ${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite
+
+echo "Installation complete..."
 
 # Move bayeswave as it gets build in source directory
 cp ${INSTALL_DIR}/src/bayeswave/src/bayeswave ${INSTALL_DIR}/local/bin/ 
