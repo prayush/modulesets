@@ -90,4 +90,9 @@ cp ${INSTALL_DIR}/src/bayeswave/src/bayeswave ${INSTALL_DIR}/local/bin/
 # Create initisalisation script
 echo '#!/bin/bash' > ${INSTALL_DIR}/${LAL_BRANCH}.sh
 echo "${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ${INSTALL_DIR}/${LAL_BRANCH}.sh
+### Personal REPO
+echo "export PYTHONPATH=${HOME}/src/UseNRinDA/scripts/:$PYTHONPATH" >> ${INSTALL_DIR}/${LAL_BRANCH}.sh
+echo "export PYTHONPATH=${HOME}/src/UseNRinDA/scripts/Utils/:$PYTHONPATH" >> ${INSTALL_DIR}/${LAL_BRANCH}.sh
+
+
 chmod a+x ${INSTALL_DIR}/${LAL_BRANCH}.sh
