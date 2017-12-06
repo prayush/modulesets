@@ -3,6 +3,10 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
+  <repository type="git" name="lalsuite-prayush"
+      href="git://github.com/prayush/" default="no"/>
+  <repository type="git" name="versions.ligo.org"
+      href="git://versions.ligo.org/" default="yes"/>
   <repository type="git" name="git.ligo.org"
       href="https://git.ligo.org/" default="yes"/>
   <repository type="git" name="ligo-cbc"
