@@ -87,7 +87,7 @@ Change installation options (branch, compile flags, ...)
 --------------------------------------------------------
 
 Any file of the name *.jhbuildrc in the configuration directory will be picked
-up by jhbuild and can be used to modify default settings. (See for an example the 
+up by jhbuild and can be used to modify default settings. (See for an example the
 pe.jhbuildrc file). To set a particular branch for a particular package, for instance
 compiling the `lalsimulation package` from the branch `lalinference_o2`, use:
 
@@ -102,13 +102,8 @@ More details are available in the JHBuild manual (<https://developer.gnome.org/j
 MacPorts
 --------
 
-<<<<<<< HEAD
 For building LALSuite on [MacPorts](https://www.macports.org), Leo suggests using
-the GCC 5 compiler toolchain (instead of clang) for full OpenMP support. On Mac
-=======
-For building LALSuite on [MacPorts](https://www.macports.org), I suggest using
 the GCC 6 compiler toolchain (instead of clang) for full OpenMP support. On Mac
->>>>>>> upstream/master
 OS, make sure that your MacPorts ports are up to date, and then run the
 following commands:
 
