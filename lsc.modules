@@ -269,7 +269,6 @@
     </dependencies>
   </distutils>
 
-<<<<<<< HEAD
   <autotools id="bayeswave" supports-non-srcdir-builds="no" skip-autogen="true" skip-install="true" check-target="false" makeargs="--directory=src">
     <branch repo="svn.ligo.caltech.edu" module="bayeswave" tag="O2_online"/>
     <dependencies>
@@ -283,7 +282,6 @@
     </dependencies>
   </autotools>
 
-=======
   <autotools id="libframe">
     <branch repo="software.ligo.org" module="libframe-8.30.tar.gz" version="8.30"
       hash="sha256:374743ccce835427a0900590a515c112661760e12ec596159d3f86073dd099da"/>
@@ -293,5 +291,4 @@
     <branch repo="software.ligo.org" module="metaio-8.4.0.tar.gz" version="8.4.0"
       hash="sha256:8990d5aa23614328880d15af72071009a578cedf75174e437b3d63643b850b76"/>
   </autotools>
->>>>>>> upstream/master
 </moduleset>
