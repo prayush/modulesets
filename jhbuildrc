@@ -9,16 +9,17 @@ import inspect
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
 
-# whether to use a local copy of modulesets (instead of fetching them from svn)
-use_local_modulesets = True
-
 # module directory
-modulesets_dir = '~/modulesets'
+local_modulesets_dir = '~/modulesets'
 
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
 # or a URL of a module set file on a web server.
-moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucket', 'nds2', 'healpix' ]
+moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucket', 'nds2', 'healpix', 'fftw' ]
+
+moduleset = [os.path.expanduser(os.path.join(local_modulesets_dir, m + '.modules')) for m in moduleset]
+# moduleset += ['bootstrap']
+del m, local_modulesets_dir
 
 #
 # A list of the modules to build.  Defaults to the GNOME core and tested apps.
@@ -44,6 +45,9 @@ if not os.path.isdir(buildroot):
 if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'jhbuild')
+
+# Put tarballs in build dir to save space in home directory
+tarballdir = os.path.join(buildroot, 'downloads')
 
 # Hack to support non-srcdir builds for projects in subdirectories of git repos
 # See https://bugzilla.gnome.org/show_bug.cgi?id=689472
