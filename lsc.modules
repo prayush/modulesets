@@ -64,13 +64,8 @@
     </dependencies>
   </autotools>
 
-<<<<<<< HEAD
   <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="lalsuite" subdir="lalsimulation"/>
-=======
-  <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
     <branch module="lscsoft/lalsuite" subdir="lalsimulation"/>
->>>>>>> upstream/master
     <dependencies>
       <dep package="lal"/>
     </dependencies>
