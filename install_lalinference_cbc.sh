@@ -54,9 +54,11 @@ echo "branches['lalinspiral'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.confi
 echo "branches['lalsimulation'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['lalinference'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['lalapps'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['glue'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['pylal'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['ligo'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['glue'] = (None, 'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['pylal'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['ligo'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['pycbc'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "branches['pycbc-glue'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "intel_executables = ['icc','icpc','ifort','mpiicc','mpiicpc','mpiifort','xiar']" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
@@ -76,8 +78,7 @@ echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 
 echo "Starting installation..."
 # Install lalsuite from anonymous repository
-${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite
-
+${INSTALL_DIR}/.local/bin/jhbuild -f ${INSTALL_DIR}/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite pycbc
 echo "Installation complete..."
 
 # Move bayeswave as it gets build in source directory

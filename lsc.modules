@@ -140,7 +140,7 @@
   </autotools>
 
   <distutils id="pylal">
-    <branch module="prayush-kumar/lalsuite" subdir="pylal"/>
+    <branch module="lscsoft/lalsuite-archive" subdir="pylal"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -156,7 +156,7 @@
   </distutils>
 
   <distutils id="ligo">
-    <branch module="prayush-kumar/lalsuite" subdir="ligo"/>
+    <branch module="lscsoft/lalsuite-archive" subdir="ligo"/>
   </distutils>
 
   <distutils id="lvalert">
@@ -263,7 +263,7 @@
   </distutils>
 
   <distutils id="pycbc">
-    <branch repo="ligo-cbc" module="pycbc"/>
+    <branch repo="lalsuite-prayush" module="pycbc"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalsimulation"/>
