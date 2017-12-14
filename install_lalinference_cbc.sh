@@ -17,7 +17,7 @@ cd ${INSTALL_DIR}
 
 # Download module sets for jhbuild
 if [ ! -d ${INSTALL_DIR}/modulesets ]; then
-  git clone git://github.com/vivienr/modulesets.git ${INSTALL_DIR}/modulesets
+  git clone git://github.com/prayush/modulesets.git ${INSTALL_DIR}/modulesets
 fi
 cd ${INSTALL_DIR}/modulesets
 git pull
