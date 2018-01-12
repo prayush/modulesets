@@ -30,9 +30,9 @@ Instructions
 The `install_lalinference_cbc.sh` script contains all the commands for a standard
 installation on the LIGO Data Grid and can be run as is:
 
-    $ nohup ./install_lalinference_cbc.sh &
+    $ ./install_lalinference_cbc.sh ${INSTALLATION_DIR} ${BRANCH_NAME}
 
-The codes will be installed in `~/pe` and published in `~/public_html/pe/build`
+The codes will be installed in `${INSTALLATION_DIR}` and published in `~/public_html/pe/build`
 to be viewable on the web.
 
 Manual Installation
@@ -41,7 +41,7 @@ Manual Installation
 To use, first clone this repository into your home directory under
 `~/modulesets` as follows:
 
-    $ git clone git://github.com/vivienr/modulesets.git ~/modulesets
+    $ git clone git://github.com/prayush/modulesets.git ~/modulesets
 
 Next, clone and install JHBuild as follows (adapted from
 <http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
