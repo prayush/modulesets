@@ -10,7 +10,7 @@ import inspect
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
 
 # module directory
-local_modulesets_dir = '~/modulesets'
+local_modulesets_dir = '~/src/modulesets'
 
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
