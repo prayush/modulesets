@@ -6,7 +6,7 @@
   <repository type="git" name="lalsuite-prayush"
       href="git://github.com/prayush/" default="no"/>
   <repository type="git" name="versions.ligo.org"
-      href="git://versions.ligo.org/" default="yes"/>
+      href="git://versions.ligo.org/" default="no"/>
   <repository type="git" name="git.ligo.org"
       href="https://git.ligo.org/" default="yes"/>
   <repository type="git" name="ligo-cbc"
@@ -140,7 +140,7 @@
   </autotools>
 
   <distutils id="pylal">
-    <branch module="lscsoft/lalsuite-archive" subdir="pylal"/>
+    <branch module="lscsoft/pylal.git"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
