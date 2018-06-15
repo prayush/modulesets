@@ -55,7 +55,7 @@ echo "branches['lalsimulation'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.con
 echo "branches['lalinference'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['lalapps'] = (None,'${LAL_BRANCH}')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['glue'] = (None, 'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "branches['pylal'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+#echo "branches['pylal'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['ligo'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['pycbc'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "branches['pycbc-glue'] = (None,'master')" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
@@ -68,7 +68,7 @@ echo '    """Check whether `name` is on PATH."""' >> ${INSTALL_DIR}/.config/pe.j
 echo "    return find_executable(name) is not None" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "if all([is_in_path(name) for name in intel_executables]):" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
-echo "   icc = True" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
+echo "   icc = False" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "del name" >> ${INSTALL_DIR}/.config/pe.jhbuildrc
 echo "del intel_executables" >> ${INSTALL_DIR}/.config/pe.jhbuildrc

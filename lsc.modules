@@ -25,32 +25,32 @@
   and https://bugzilla.gnome.org/show_bug.cgi?id=689472 -->
 
   <autotools id="lal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lal"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lal"/>
   </autotools>
 
   <autotools id="lalframe" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalframe"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalframe"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalmetaio" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalmetaio"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalmetaio"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalxml" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalxml"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalxml"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalinspiral" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalinspiral"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalinspiral"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -60,7 +60,7 @@
   </autotools>
 
   <autotools id="lalburst" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalburst"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalburst"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -69,14 +69,14 @@
   </autotools>
 
   <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalsimulation"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalsimulation"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalpulsar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp --enable-cfitsio">
-    <branch module="prayush-kumar/lalsuite" subdir="lalpulsar"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalpulsar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalxml"/>
@@ -84,7 +84,7 @@
   </autotools>
 
   <autotools id="lalstochastic" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="lalstochastic"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalstochastic"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -92,7 +92,7 @@
   </autotools>
 
   <autotools id="lalinference" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
-    <branch module="prayush-kumar/lalsuite" subdir="lalinference"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalinference"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -108,7 +108,7 @@
   </autotools>
 
   <autotools id="laldetchar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-fast-gsl">
-    <branch module="prayush-kumar/lalsuite" subdir="laldetchar"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="laldetchar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -119,7 +119,7 @@
   </autotools>
 
   <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-fast-gsl --enable-openmp --enable-mpi --enable-cfitsio">
-    <branch module="prayush-kumar/lalsuite" subdir="lalapps"/>
+    <branch module="jonathan-blackman/lalsuite" subdir="lalapps"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -139,8 +139,8 @@
     <branch repo="software.ligo.org" module="lalsuite-extra-1.3.0.tar.gz" version="1.3.0" hash="sha256:c3341af345169592af115134183222be3e22e209c4c292f9ccbb1b69cddf33a2" />
   </autotools>
 
-  <distutils id="pylal">
-    <branch module="lscsoft/pylal.git"/>
+  <distutils id="pylal" >
+    <branch repo="software.ligo.org" module="pylal-0.10.0.tar.gz" version="0.10.0" hash="sha256:4c957fe4a81302c3bc024792e4b04a92e099526314b5c7415300cebb6674d791" />
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
